@@ -1,7 +1,7 @@
 import click
 import requests
 from pathlib import Path
-from _dupdate.github.releases import getRelease
+from github.releases import getRelease
 
 @click.group()
 def cli():
@@ -18,8 +18,6 @@ def apktool():
     with open("bin/apktool.jar","wb") as jarFile:
         jarFile.write(jar.content)
     click.echo('Succesfully installed to bin/apktool/apktool.jar, you can now simply use the alias dapktool to access apktool everywhere')
-
-
 
 if __name__ == '__main__':
     cli()

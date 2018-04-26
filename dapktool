@@ -1,8 +1,10 @@
 #!/bin/sh
 
-if [ ! -f bin/apktool.jar ]; then
+script_dir=$(dirname "$0")
+
+if [ ! -f $script_dir/bin/apktool.jar ]; then
     echo "Apktool doesn't seem to be installed, execute dupdate apktool to do so now!"
     exit 1
 fi
 
-java -jar bin/apktool.jar "$@"
+java -jar $script_dir/bin/apktool.jar "$@"
