@@ -3,3 +3,6 @@ click==6.7
 
 # For api requests
 requests==2.18.4
+
+# For language fuckery
+pycountry==18.2.23
